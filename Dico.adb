@@ -37,11 +37,25 @@
 		&   --concatenation
 	---------------------if------------------------------#
 		if (condition) then
+
+		elsif
+
+		else
 			
 		end if;
+
+		case int is
+			when 0 | 360 =>
+				Put_Line (" 0.360 ");
+			when 270 =>
+				Put_Line (" 270 ");
+			when 271 .. 359 =>
+				Put_Line (" 271 .. 359 ");
+			when others =>
+				Put_Line ("Autre");
+		end case;
 	---------------------boucles-------------------------#
-		while()
-		loop
+		while() loop
 			
 		end loop;
 
@@ -50,6 +64,10 @@
 		end loop;
 
 		for T of Liste loop
+			
+		end loop;
+
+		loop
 			
 		end loop;
 	---------------------function/sous programme---------#
@@ -111,22 +129,30 @@
 	-----------------------------------------------------#
 	package Object_Pack is
 
-	    type Object is tagged record
-	   		X : Integer;
-	   	end record;
+	    type Object is tagged private
 
 	    procedure Methode(Self : in out My_Class);
 	    --appel par My_class.Methode ou Methode(My_Class)
 
+	private--encapsulation
+
+		type Object is tagged record
+	   		X : Integer;
+	   	end record;
+
 	end Object_Pack;
 	---------------------heritage------------------------#
 
-	type Derived is new My_Class with record
-	    Y : Integer;
-	    --ajout d'attribut
-	end record;
+	package Object_Pack2 is
 
-	overriding procedure Methode (Self : in out Derived);
+		type Derived is new My_Class with record
+		    Y : Integer;
+		    --ajout d'attribut
+		end record;
+
+		overriding procedure Methode (Self : in out Derived);
+
+	end Object_Pack2 ;
 
 	---------------------mot de language-----------------#
 

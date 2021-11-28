@@ -12,7 +12,7 @@
 		long
 		long long
 
-		float				
+		float
 
 		double
 
@@ -34,7 +34,10 @@
 		if (/* condition */)
 		{
 			/* code */
+		}else{
+
 		}
+
 		((boolean)?val1:val2)
 
 		switch(){
@@ -62,6 +65,7 @@
 
 	//--------------------Multithread/task----------------//
 		int pid=fork();
+		wait(NULL);//point de rendez vous
 	//----------------------------------------------------//
 	//                    Objet                           //
 	//----------------------------------------------------//
