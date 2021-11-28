@@ -1,0 +1,126 @@
+	//--------------------Types---------------------------#
+		+----------+--------------------+
+		|Catégorie |Type                |
+		+----------+--------------------+
+		|booléenne |booléen             |
+		+----------+--------------------+
+		|numérique |entier              |
+		|          | réel               |
+		+----------+--------------------+
+		|textuelle |caractère           |
+		|          |chaine de caractères|
+		+----------+--------------------+
+	//--------------------Tableau et collection-----------#
+		tableau[] de caractere
+		tab <- { 2 , 3, 7, 1, 9, 2, 5, 8, 4, 2 } 
+	//--------------------expression----------------------#
+		et
+		ou
+		xou
+		non
+
+		+ pour l’addition
+		- pour la soustraction
+		x pour la multiplication
+		/ pour la division réelle
+		div pour la division entière
+		mod pour le reste de la division entière (appelé aussi modulo)
+
+		© concatenation
+
+		e/s
+		e
+		s
+	//--------------------if------------------------------#
+
+		si choix = 'I' alors
+			val <-val + 1
+		sinon
+			si choix = 'D' alors
+				val <- val - 1
+			fsi
+		fsi
+
+		selon donnée
+			cas valeur1 : instruction(s)
+			cas valeur2 : instruction(s)
+
+
+			autre cas : instruction(s)
+		fselon 
+	//--------------------boucles-------------------------#
+		tq EXPRESSION faire
+			//instructions
+		ftq
+
+		faire
+			//instructions
+		tq EXPRESSION
+
+		répéter
+			//instructions
+		jusqu’à EXPRESSION
+
+		pour variable de valDep à valArr pas valPas
+			//instructions
+		fpour
+
+		répéter n fois
+			//instructions
+		frépéter 
+	//--------------------function/sous programme---------#
+		Algorithme Exemple
+		Constante :
+			TAUX_CORR : entier <- 0.9
+		Variable :
+			long, larg : entier
+			aire : entier
+		DEBUT
+			//instructions
+			//retourner larg
+		FIN
+
+		appel Exemple
+	//--------------------package-------------------------#
+		? sans doute pas
+
+	//--------------------mot de language-----------------#
+
+	fonction 
+
+	car ( entier )     : caractère	//retourne le caractère correspond à la valeur entière de la table ASCII
+
+	ord ( caractère )  : entier 	//retourne la valeur ASCII d'un caractère
+
+	enChaine ( réel )  : chaine 	//convertie un réel en Chaine
+
+	enChaine (entier)  : chaine 	//convertie un entier en Chaine
+
+	enEntier ( chaine ):  entier 	//convertie une Chaine en entier,la chaine doit être composée que de caractères ['0';'9'] 
+									//et éventuellement d'un caractère signe '-' ou '+' en début de chaine
+
+	enRéel ( chaine ) : réel    	//convertie une Chaine en réel,la chaine doit être composée que de caractères  ['0';'9'] 
+									//un et un seul caractère ',' et éventuellement d'un caractère signe '-' ou '+' en début de chaine
+
+	plancher ( réel ) : entier 		//retourne la valeur plancher d'un réel
+									//plancher ( 2,3 ) donne 2 plafond (2,7) donne 2
+
+	plafond ( réel ) : entier		//retourne la valeur plafond d'un réel
+									//plafond ( 2,3 ) donne 3 plafond (2,7) donne 3
+
+	arrondi ( réel ) : entier		//retourne la valeur arrondie d'un réel
+									//arrondi ( 2,3 ) donne 2 arrondi (2,7) donne 3 arrondi (2,5) donne 3
+
+	L'affectation d'un entier dans un réel est possible, des 0 sont ajoutés dans la partie décimale
+	L'affectation d'un réel dans un entier est possible, la partie décimale est perdue
+
+	On peut concaténer (en pseudo-code à l'aide de l'opérateur ©) des types de la catégorie textuelle entre
+	eux.
+
+	aujourdhui() : 		 chaine 	retourne sous forme de chaine la date du jour au format jj/mm/aaaa
+	jour(chaine) : 		 entier 	retourne la partie jour d'une chaine correspondant à une date au format jj/mm/aaaa
+	mois(chaine) : 		 entier 	retourne la partie mois d'une chaine correspondant à une date au format jj/mm/aaaa
+	annee(chaine) :		 entier 	retourne la partie jour d'une chaine correspondant à une date au format jj/mm/aaaa
+	estRéel (chaine) :	 booléen 	indique si la chaine peut être convertie en réel
+	estEntier (chaine) : booléen 	indique si la chaine peut être convertie en entier
+	hasard (entier) : 	 entier 	retourne une valeur entière prise au hasard sur l'intervalle [ 0; valeur du paramètre [ 
