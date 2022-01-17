@@ -1,13 +1,16 @@
 	/*--------------------Compilation/lancement-----------*/
-		//node Dico.js
+
 	/*--------------------Types---------------------------*/
-		//typage implicite
-		//=>Object, Number, String, Boolean, Null et Undefined.
-		var int = 0 ;
-		var char = 'o';
+		//faible typage
+			  Omega=3		//portée global
+		var   Alpha=1 ;		//portée plus grande
+		let   Beta="ouije";	//portée plus local
+		const Ceta = NaN ;
+
 	/*--------------------Tableau et collection-----------*/
-		var tab = [1,2,3];
-		tab = new Array("un","deux","trois");
+		var a   = new Array();
+		var b   = [1,"2"];
+
 	/*--------------------expression----------------------*/
 	/*
 		||=ou
@@ -18,43 +21,67 @@
 		>= supOuEgal
 		<= infOuEgal
 		+ concatenation
-		=== comparaison
 	*/
 	/*--------------------if------------------------------*/
 		if (true) {
 
-		} else {
+		}
+		else{
 
 		}
 
-		var i =(true?"vraie":"faux");
+		(true)?"oui":"non";
 
-		switch(i){
-			case "vraie":  i="afficionado";  break; 
-			default     :  i="None"       ;  
+		switch(){
+			case "monday" : /*blabla*/ break ;
+			default:
 		}
+
+
 	/*--------------------boucles-------------------------*/
-		while(false){
+
+		label!
+			expression ;
+
+		break label ;
+
+		while(true){
 
 		}
 
 		do{
 
-		}while(false);
+		}while();
 
-		for (var i = tab.length - 1; i >= 0; i--) {
-
+		for (var i = 0; i < Things.length; i++) {
+			Things[i]
 		}
 
+		for (var i in collection) {
+			
+		}
+
+		for(var i of collection) {
+			
+		}
+
+		collection.forEach();
+
 	/*--------------------function/sous programme---------*/
+
 		function function_name(argument) {
 			// body...
 		}
+
 	/*--------------------package-------------------------*/
 
 	/*--------------------Exception-----------------------*/
-		throw 'Parameter is not a number!';
-		try{}catch(error){}
+		try{
+
+		}catch(error)
+
+		throw new Error("la erreur");
+
 	/*--------------------Multithread/task----------------*/
 
 	/*----------------------------------------------------*/
@@ -64,7 +91,3 @@
 	/*--------------------heritage------------------------*/
 
 	/*--------------------mot de language-----------------*/
-
-/*
-notabene javascript ce sert des objet sans classe (on ne peut donc pas crée le meme objet)
-*/
