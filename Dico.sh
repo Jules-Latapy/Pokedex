@@ -70,7 +70,6 @@
 	#--------------------Exception-----------------------#
 	#--------------------Multithread/task----------------#
 		& #ne pas attendre que la commande ce termine 
-		pid=fork() 
 
 	#--------------------mot de language-----------------*/
 
