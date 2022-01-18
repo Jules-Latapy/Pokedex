@@ -1,9 +1,7 @@
 	#--------------------Compilation/lancement-----------#
 		#python programme.py
 	#--------------------Types---------------------------#
-		int i 
-		float f
-		string s
+		#non typé
 	#--------------------Tableau et collection-----------#
 		list[]
 		dict[]
