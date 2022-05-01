@@ -1,3 +1,4 @@
+"""a finir..."""
 	#--------------------Compilation/lancement-----------#
 		#python programme.py
 	#--------------------Types---------------------------#
