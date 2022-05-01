@@ -1,10 +1,19 @@
-<?php
+//a finir
 	/*-------------------Compilation/lancement----------*/
 		//?
 	/*-------------------Types--------------------------*/
-		$type = 0 ;
+		$type = 0 ; //typage faible il y a aussi les fonction fléché et les types callable
 	/*-------------------Tableau et collection----------*/
 		$arrayName = array('clef' => valeur, );
+		$arrayName = [0,2,3,6];
+
+		enum Suit
+		{
+		    case Hearts;
+		    case Diamonds;
+		    case Clubs;
+		    case Spades;
+		}
 	/*-------------------expression---------------------*/
 		||=ou
 		&&=et
@@ -41,9 +50,9 @@
 		}
 
 		do{
-
+			// code...
 		}
-		while()
+		while(condition)
 
 		for ($i=0; $i < $value; $i++) { 
 			// code...
@@ -53,9 +62,9 @@
 			// code...
 		}
 	/*-------------------function/sous programme--------*/
-		function FunctionName($value='')
+		function FunctionName($value=''):iterable
 		{
-			//peut retourner nimporte quoi
+			//retourne un iterable
 		}
 	/*-------------------package------------------------*/
 		--> renommer sont fichier en ".inc.php"
@@ -66,7 +75,7 @@
 			
 		}
 	/*-------------------Multithread/task---------------*/
-
+		?
 	/*--------------------------------------------------*/
 	/*                    Objet                         */
 	/*--------------------------------------------------*/
@@ -103,13 +112,7 @@
 	class Client2 extends Client
 	{
 		
-		function __construct(argument)
-		{
-
-		}
 	}
 
 	/*-------------------mot de language----------------*/
 
-		echo "string";
-?>
