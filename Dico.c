@@ -113,4 +113,5 @@
 	static		//variables persistante jusqu'a la fin du programme
 	switch	
 	volatile	//empeche l'optimisation du code de la variable
+
 	while

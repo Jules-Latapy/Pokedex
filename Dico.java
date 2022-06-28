@@ -107,10 +107,45 @@
 		this.  //celle ci 
 
 	/*---------------------mot de language----------------*/
-		volatile
-		native 		 //iterfacage
 
-		static //toute les instance partage cette attribut/methode
-		private //pas utilisé a l'exterieur
-
-		System.out.println("une phrase");
+	abstract	
+	continue	
+	for	
+	new	
+	switch
+	assert	
+	default	
+	goto	//ne pas utiliser
+	package	
+	synchronized
+	do	
+	if	
+	private
+	break	
+	implements	
+	protected	
+	throw
+	else	
+	import	
+	public	
+	throws
+	case	
+	enum
+	instanceof	
+	return	
+	transient
+	catch	
+	extends
+	try
+	final	
+	interface	
+	static
+	class	
+	finally
+	strictfp
+	volatile
+	const	//ne pas utiliser
+	native	
+	super
+	this
+	while

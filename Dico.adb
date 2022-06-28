@@ -98,8 +98,6 @@
 		exception
 		   when CONSTRAINT_ERROR => Put_line("erreur utilisateur") ; 
 		   when others           => Put_line("erreur inatendu") ; 
-		try :
-		end try ;
 	---------------------Multithread/task----------------#
 		task t;
 
@@ -155,16 +153,90 @@
 	end Object_Pack2 ;
 
 	---------------------mot de language-----------------#
+	synchronized (Ada 2005)	--qui n epux etre implementé que par des taches
+	abstract (Ada 95)
+	interface (Ada 2005)
+	overriding (Ada 2005)		
+	tagged (Ada 95)
+	limited	
 
-	in out
+	constant
+	null
+	access
+	all		
+	type
+	subtype	
+	record
+	array
+	range
+	digits
+	delta	
+	function
+	return	
+	procedure
+	renames	
+	at			
+	aliased (Ada 95)
 
-	pragma assert(true);
-	pragma suppress(index_check) ;
+	abort
+	terminate	
+	protected (Ada 95)
+	entry		
+	accept	
+	select	
+	separate
+	requeue (Ada 95)	
 
-	exit when i = 1 ;
-	==if exit
+	not	
+	or	
+	and	
+	xor
 
-	delay until (clock + Delai_Attente) ;
+	new	
+	generic	
+	package	
+	body		
+	private	
+	task	
 
-	delay 0.1 ;
+	pragma	
+			
+	declare		
+
+	others	
+
+	goto--a utilisé avec des flag comme <<a>>
+
+	if
+	then
+	else
+	elsif
+	case
+	when
+	some (Ada 2012)	--(for some var in range => predicate)
+
+	loop
+	exit
+	while
+	do
+	for
+	of
+	reverse	
+
+	is	
+	begin
+	end	
+	in
+	out	
+	with	
+	use	
+	raise	
+	exception
+	delay	
+	until (Ada 95)	
+
+	rem	--le reste de la division
+	mod	
+	abs	
+
 		

@@ -16,7 +16,7 @@
 		$^O #system d'expl
 		$^X #nom de l'exe
 
-		our $w #argument du main comme "-w" vaut 1 si activer et undefined sinon peut etre place nimporte quand 
+		our $w #variable global
 		\$i    #reference de i
 		$$v    #ce qui est poité par v
 
@@ -102,12 +102,17 @@
 		package nom_de_paqu ;
 		import module ;
 
-		use try::tiny #chagre un module 
+		use try::tiny #charge un module 
 	#--------------------Exception-----------------------#
-	try{
-	}catch(){};
+		eval {
+		    die "Oops!";
+		    1;
+		} or do {
+		    my $e = $@;
+		    print("Something went wrong: $e\n");
+		};
 	#--------------------Multithread/task----------------#
-
+		?
 	#----------------------------------------------------#
 	#                    Objet                           #
 	#----------------------------------------------------#
