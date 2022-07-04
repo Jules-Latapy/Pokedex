@@ -3,7 +3,7 @@
 ---
 ## Compilation & lancement
 
-compilation avec gnat (gcc -c) -> gnatmake Dico.adb
+compilation avec gnat (gcc -c) -> gnatmake Dico.adb\
 creer ensuite un executable
 
 ---
