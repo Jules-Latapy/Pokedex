@@ -44,21 +44,18 @@ creer ensuite un executable
 ## Expression
 | symbole | definition |
 |--|--|
-| or  | ou                              |
-| and | et                              |
-| xor | xou                             |
-| not | negation                        |
-| /=  | inegalité                       |
-| =   | egalité                         |
-| >=  | supOuEgal                       |
-| <=  | infOuEgal                       |
-| &   | concatenation                   |
-| :=  | affectation                     |
-|  :  | nommage (variables/label)       |
-| '   | attribut defini par le language |
-| .   | spécification                   |
-| =>  | selection (switch/exception)    |
-|<<a>>| flags (pour les goto)           |
+| /=   | inegalité                       |
+| =    | egalité                         |
+| >=   | supOuEgal                       |
+| <=   | infOuEgal                       |
+| &    | concatenation                   |
+| :=   | affectation                     |
+|  :   | nommage (variables/label)       |
+| '    | attribut defini par le language |
+| .    | spécification                   |
+| =>   | selection (switch/exception)    |
+|<\<a>>| flags (pour les goto)           |
+| <>   | type non contraint              |
 
 ---
 ## Condition
@@ -103,6 +100,7 @@ creer ensuite un executable
 ```
 ----
 ### Function/Sous-programme
+```ada
 	procedure pro is
 		
 	begin
@@ -118,9 +116,10 @@ creer ensuite un executable
 	function funkyOneLine(x,y :integer) return Integer is (x*y) ;
 
 	procedure ProcedureInParameter( Process  : access procedure (int : integer) ) ;
-
+```
 ----
 ## Package
+```ada
 	--fichier ads
 	package pack is
 		--maquettes, types, variables globales
@@ -142,17 +141,19 @@ creer ensuite un executable
 	end F ;
 
 	with # use #
-
+```
 ----
 ## Exception
+```ada
 	raise exception  with "My exception message";
 
 	exception
 		when CONSTRAINT_ERROR => Put_line("erreur utilisateur") ; 
 		when others           => Put_line("erreur inatendu") ;
-
+```
 ----
 ## Multithread/task
+```ada
 	task t;
 
 	task body t is
@@ -175,36 +176,44 @@ creer ensuite un executable
 
 	or when var > 0
 		--autre instruction 
-
+```
 ----
 ## OBJET
+```ada
 	package Object_Pack is
      
-	    type Object is tagged private
-     
-	    procedure Methode(Self : Object);
-	    --appel par Object.Methode ou Methode(Object) --c'est le tagged qui permet la notation avec le points
+		type Object is tagged private
+
+		procedure Methode(Self : Object);
+		--appel par Object.Methode ou Methode(Object) --c'est le tagged qui permet la notation avec le points
+
+		--Abstraction
+		type destructible is interface;
+
+		procedure detruire(self: destructible ) is abstract ;
      
 	private--encapsulation
      
 		type Object is tagged record
-	   		X : Integer;
-	   	end record;
+			X : Integer;
+		end record;
      
 	end Object_Pack;
 
 
 	package Object_Pack2 is
      
-		type Derived is new My_Class with record
+		type Derived is new Object and destructible with record
 		    Y : Integer;
 		    --ajout d'attribut
 		end record;
      
 		overriding procedure Methode (Self : in out Derived);
+		
+		overriding procedure detruire(self: destructible ) is null ;
      
 	end Object_Pack2 ;
-
+```
 	---------------------mot de language-----------------#
 	synchronized (Ada 2005)	--qui ne peux etre implementé que par des taches
 	abstract (Ada 95)
