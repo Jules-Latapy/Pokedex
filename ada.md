@@ -68,6 +68,7 @@ creer ensuite un executable
 		
 	end if;
 
+	-----------------------------------------switch
 	case int is
 		when 0 | 360 =>
 			Put_Line (" 0 ou 360 ");
@@ -82,18 +83,25 @@ creer ensuite un executable
 ---
 ### Boucles
 ```ada
+
 	while loop
 		
 	end loop;
 
+	-----------------------------------------
+	
 	for i in 0..10 loop
 		
 	end loop;
 
+	-----------------------------------------
+	
 	for T of Liste loop
 		
 	end loop;
 
+	-----------------------------------------
+	
 	loop
 		
 	end loop;
@@ -106,14 +114,20 @@ creer ensuite un executable
 	begin
 		
 	end pro ;
+	
+	-----------------------------------------
 
 	function funk return Integer is
 		
 	begin -- funk
 		return 3 ;
 	end funk;
+	
+	-----------------------------------------
 
 	function funkyOneLine(x,y :integer) return Integer is (x*y) ;
+	
+	-----------------------------------------
 
 	procedure ProcedureInParameter( Process  : access procedure (int : integer) ) ;
 ```
@@ -124,13 +138,15 @@ creer ensuite un executable
 	package pack is
 		--maquettes, types, variables globales
 	end pack;
-
+	
+	
 	--fichier adb
 	package body pack is
 		--corps des function
 	end pack;
 
-	sur le même principe:
+
+	-----------------------------------------sur le même principe:
 
 	Generic --si un package est generic --> il doit etre instancié
 		--le type generic
@@ -140,13 +156,15 @@ creer ensuite un executable
 		--zone caché qui ne peut etre utilisé
 	end F ;
 
+	-----------------------------------------
+	
 	with # use #
 ```
 ----
 ## Exception
 ```ada
-	raise exception  with "My exception message";
 
+	raise exception  with "My exception message";
 	exception
 		when CONSTRAINT_ERROR => Put_line("erreur utilisateur") ; 
 		when others           => Put_line("erreur inatendu") ;
@@ -214,7 +232,8 @@ creer ensuite un executable
      
 	end Object_Pack2 ;
 ```
-	---------------------mot de language-----------------#
+## mot de language
+```ada
 	synchronized (Ada 2005)	--qui ne peux etre implementé que par des taches
 	abstract (Ada 95)
 	interface (Ada 2005)
@@ -300,3 +319,4 @@ creer ensuite un executable
 	rem	--le reste de la division
 	mod	
 	abs	
+```
