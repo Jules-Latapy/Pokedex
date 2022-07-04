@@ -1,16 +1,16 @@
 # ADA résumé 
 
-----
+---
 ## Compilation & lancement
 
 compilation avec gnat (gcc -c) -> gnatmake Dico.adb
 creer ensuite un executable
 
-----
+---
 ## Types
 
 *primitif*
-
+```ada
 	Natural	
 	Integer 
 	Float	
@@ -20,40 +20,49 @@ creer ensuite un executable
 	Boolean 
 	String(1..6)
 	Unbounded_String 
-
+```
 *defini par l'utilisateur*
 
+```ada
 	type My_Int is range 0 .. 100;
-	type My_Mod is mod 2 ;
-	type My_FLo is digits 3;
+	type My_Mod is mod 2 ; 
+	type My_FLo is digits 3; --precision
+	type My_Del is delta 10.0 range 0.0 .. 250.0; --marge d'erreur 
 	type addresse is access type_addesse;
-
-----
+```
+---
 ## Tableau et collection
+```ada
 	type Liste is array (Mois range <>) of Natural ;
 	type Matrice is array (1..2 , 1..5) of Natural := (other=>(other=>0));
-	type Scalar is range 1..50 ;
 	type Jour is (Lundi,Mardi,Mecredi,Jeudi,Vendredi,Samedi,Dimanche);
 	type Date is record 
 		--aggrega de type
 	end record ;
-----
+```
+---
 ## Expression
 | symbole | definition |
 |--|--|
-| or  | ou            |
-| and | et            |
-| xor | xou           |
-| not | negation      |
-| /=  | inegalité     |
-| =   | egalité       |
-| >=  | supOuEgal     |
-| <=  | infOuEgal     |
-| &   | concatenation |
-| :=  | affectation   |
+| or  | ou                              |
+| and | et                              |
+| xor | xou                             |
+| not | negation                        |
+| /=  | inegalité                       |
+| =   | egalité                         |
+| >=  | supOuEgal                       |
+| <=  | infOuEgal                       |
+| &   | concatenation                   |
+| :=  | affectation                     |
+|  :  | nommage (variables/label)       |
+| '   | attribut defini par le language |
+| .   | spécification                   |
+| =>  | selection (switch/exception)    |
+|<<a>>| flags (pour les goto)           |
 
-----
+---
 ## Condition
+```ada
 	if (condition) then
      
 	elsif
@@ -72,9 +81,10 @@ creer ensuite un executable
 		when others =>
 			Put_Line ("Autre");
 	end case;
-----
+```
+---
 ### Boucles
-
+```ada
 	while loop
 		
 	end loop;
@@ -90,7 +100,7 @@ creer ensuite un executable
 	loop
 		
 	end loop;
-
+```
 ----
 ### Function/Sous-programme
 	procedure pro is
@@ -113,13 +123,23 @@ creer ensuite un executable
 ## Package
 	--fichier ads
 	package pack is
-		--maquettes attribut et types
+		--maquettes, types, variables globales
 	end pack;
 
 	--fichier adb
 	package body pack is
 		--corps des function
 	end pack;
+
+	sur le même principe:
+
+	Generic --si un package est generic --> il doit etre instancié
+		--le type generic
+	package F is
+		--maquettes, types, variables globales
+	private
+		--zone caché qui ne peut etre utilisé
+	end F ;
 
 	with # use #
 
@@ -162,8 +182,8 @@ creer ensuite un executable
      
 	    type Object is tagged private
      
-	    procedure Methode(Self : in out My_Class);
-	    --appel par My_class.Methode ou Methode(My_Class) --c'est le tagged qui permet le points
+	    procedure Methode(Self : Object);
+	    --appel par Object.Methode ou Methode(Object) --c'est le tagged qui permet la notation avec le points
      
 	private--encapsulation
      
@@ -189,9 +209,9 @@ creer ensuite un executable
 	synchronized (Ada 2005)	--qui ne peux etre implementé que par des taches
 	abstract (Ada 95)
 	interface (Ada 2005)
-	overriding (Ada 2005)		
+	overriding (Ada 2005)	
 	tagged (Ada 95)
-	limited					--ne peut pas etre utilisé
+	limited					--signifie ne peut pas etre utilisé à l'exterieur
 
 	constant
 	null
@@ -238,7 +258,7 @@ creer ensuite un executable
 
 	others	
 
-	goto--a utilisé avec des flag comme <<a>>
+	goto			--a utilisé avec des flag comme <<a>>
 
 	if
 	then
