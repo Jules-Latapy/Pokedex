@@ -59,7 +59,7 @@ java Ex args  -> lance la vm sur se fichier
 |--|--|
 | -> | lambda                       |
 | :: | reference a une fonction     |
-| <T>| generique                    |
+| \<T>| generique                    |
 | ...| nombre variables d'arguments |
 | @T | annotations                  |
 | {} | section                      |
