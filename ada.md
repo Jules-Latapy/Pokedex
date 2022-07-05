@@ -42,17 +42,39 @@ creer ensuite un executable
 ```
 ---
 ## Expression
+
+*operateur booleen*
 | symbole | definition |
 |--|--|
+| and  | et                              |
+| or   | ou                              |
+| xor  | xou                             |
+| not  | non                             |
+|  =   | egalité                         |
 | /=   | inegalité                       |
-| =    | egalité                         |
 | >=   | supOuEgal                       |
 | <=   | infOuEgal                       |
-| &    | concatenation                   |
+
+*operateur mathématique*
+| symbole | definition |
+|--|--|
+|  +   | addition                        |
+|  -   | negation                        |
+|  *   | multiplication                  |
+|  /   | division                        |
+|  **  | puisssance                      |
+| mod  | modulo                          |
+| rem  | reste de la division            |
+
+*autre operateur*
+| symbole | definition |
+|--|--|
 | :=   | affectation                     |
 |  :   | nommage (variables/label)       |
-| '    | attribut defini par le language |
-| .    | spécification                   |
+|  &   | concatenation                   |
+|  #   | base comme 2#1110_0000#         |
+|  '   | attribut defini par le language |
+|  .   | spécification                   |
 | =>   | selection (switch/exception)    |
 |<\<a>>| flags (pour les goto)           |
 | <>   | type non contraint              |
