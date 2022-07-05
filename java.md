@@ -2,7 +2,7 @@
 
 ---
 ## Compilation
-javac Ex.java -encoding utf8 -> crée un executable(.class) pour la machine virtuelle de java
+javac Ex.java -encoding utf8 -> crée un executable(.class) pour la machine virtuelle de java\
 java Ex args  -> lance la vm sur se fichier
 	
 
