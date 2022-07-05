@@ -161,7 +161,7 @@ java Ex args  -> lance la vm sur se fichier
 
 	
 	synchronized //accès exclusif à un objet pendant l’exécution de la méthode
-	volatile     //la variables doit toujours etre lus a nouveau de la memoire centrale avant les operations
+	volatile     //la variables doit toujours etre lus a nouveau a partir de la memoire centrale avant les operations
 ```
 ----
 ## OBJET
@@ -183,6 +183,7 @@ java Ex args  -> lance la vm sur se fichier
 			T detruire() ;
 		}
 
+		//heritage
 		public class Derived extends Object implements destructible<Integer> {
 
 			public Derived(){
