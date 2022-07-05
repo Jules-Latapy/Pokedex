@@ -35,7 +35,7 @@ java Ex args  -> lance la vm sur se fichier
 | symbole | definition |
 |--|--|
 | && | ou                           |
-| || | et                           |
+| \|\| | et                           |
 | ^  | xou                          |
 | !  | non                          |
 | == | inegalité                    |
