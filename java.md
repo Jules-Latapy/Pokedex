@@ -34,14 +34,16 @@ java Ex args  -> lance la vm sur se fichier
 *operateur booleen*
 | symbole | definition |
 |--|--|
-| && | ou                           |
-| \|\| | et                           |
-| ^  | xou                          |
-| !  | non                          |
-| == | inegalité                    |
-| != | egalité                      |
-| >= | supOuEgal                    |
-| <= | infOuEgal                    |
+| &&   | ou                              |
+| \|\| | et                              |
+| ^    | xou                             |
+| !    | non                             |
+| ==   | inegalité                       |
+| !=   | egalité                         |
+|  >   | sup                             |
+| >=   | supOuEgal                       |
+|  <   | inf                             |
+| <=   | infOuEgal                       |
 
 *operateur mathématique*
 | symbole | definition |
@@ -54,18 +56,18 @@ java Ex args  -> lance la vm sur se fichier
 | i++| ajout 1 direct               |
 | += | ajout direct                 |
 
-*autre operateur*
+*autre symboles*
 | symbole | definition |
 |--|--|
-| -> | lambda                       |
-| :: | reference a une fonction     |
+| ->  | lambda                       |
+| ::  | reference a une fonction     |
 | \<T>| generique                    |
-| ...| nombre variables d'arguments |
-| @T | annotations                  |
-| {} | section                      |
-| [] | tableau                      |
-| .  | specification                |
-|f:{}| flag                         |
+| ... | nombre variables d'arguments |
+| @T  | annotations                  |
+| {}  | section                      |
+| []  | tableau                      |
+| .   | specification                |
+|f:{} | label                        |
 
 ---
 ## Condition
