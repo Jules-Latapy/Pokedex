@@ -34,7 +34,7 @@ creer ensuite un executable
 ## Tableau et collection
 ```ada
 	type Liste is array (Mois range <>) of Natural ;
-	type Matrice is array (1..2 , 1..5) of Natural := (others=>(othesr=>0));
+	type Matrice is array (1..2 , 1..5) of Natural := (others=>(others=>0));
 	type Jour is (Lundi,Mardi,Mecredi,Jeudi,Vendredi,Samedi,Dimanche);
 	type Date is record 
 		--aggrega de type
@@ -52,7 +52,9 @@ creer ensuite un executable
 | not  | non                             |
 |  =   | egalité                         |
 | /=   | inegalité                       |
+|  >   | sup                             |
 | >=   | supOuEgal                       |
+|  <   | inf                             |
 | <=   | infOuEgal                       |
 
 *operateur mathématique*
