@@ -67,6 +67,7 @@ creer ensuite un executable
 |  **  | puisssance                      |
 | mod  | modulo                          |
 | rem  | reste de la division            |
+| abs  | valeur absolue                  |
 
 *autre operateur*
 | symbole | definition |
