@@ -69,7 +69,7 @@ creer ensuite un executable
 | rem  | reste de la division            |
 | abs  | valeur absolue                  |
 
-*autre operateur*
+*autre symboles*
 | symbole | definition |
 |--|--|
 | :=   | affectation                     |
