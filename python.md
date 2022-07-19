@@ -62,7 +62,7 @@ lancement d'un script avec  "_$>python nom.py"
 |  %   | modulo                          |
 |  @   | multiplication matriciel        |
 |  &   | 'et' bit a bit                  |
-|  |   | 'ou' bit a bit (aussi union)    |
+| \|   | 'ou' bit a bit (aussi union)    |
 
 *autre symboles*
 | symbole | definition |
@@ -70,6 +70,7 @@ lancement d'un script avec  "_$>python nom.py"
 |  =   | affectation                     |
 |  :   | typage/debut de block           |
 |  #   | commentaire                     |
+|  ->  | type de retour                  |
 
 ---
 ## Condition
@@ -123,6 +124,8 @@ for x in range(10):
 
 	def funkDefaut(var:str=3) -> str:
 		pass
+
+	 x = lambda a : a + 10
 
 ```
 ----
