@@ -98,11 +98,11 @@ lancement d'un script avec  "_$>python nom.py"
 ### Boucles
 ```python
 
-while condition:
-	pass
+	while condition:
+		pass
 
-for x in range(10):
-	pass
+	for x in range(10):
+		pass
 
 ```
 ----
@@ -163,60 +163,60 @@ for x in range(10):
 ----
 ## OBJET
 ```python
-class Etre_Vivant:
+	class Etre_Vivant:
 
-	def __init__(self,__nom):
-		self.__nom = __nom   #private members do the same syntax for method
+		def __init__(self,__nom):
+			self.__nom = __nom   #private members do the same syntax for method
 
-	def __str__(self):
-		return self.nom 
+		def __str__(self):
+			return self.nom 
 
-#heritage
-class Animal(Etre_Vivant):
-	
-	def __init__(self,nom, posX, posY):
-		super(Animal, self).__init__(nom)
-		self.posX = posX
-		self.posY = posY
+	#heritage
+	class Animal(Etre_Vivant):
 
-	def __str__(self):
-		return super(Animal,self).__str__() + " x:" + str(self.posX) + ",y:"+ str(self.posY)
+		def __init__(self,nom, posX, posY):
+			super(Animal, self).__init__(nom)
+			self.posX = posX
+			self.posY = posY
+
+		def __str__(self):
+			return super(Animal,self).__str__() + " x:" + str(self.posX) + ",y:"+ str(self.posY)
 ```
 ## mot de language
 ```python
 
-await 	
-else 	
-import 	
-pass
-break 	
-in 	
-raise
-class
-finally 	
-is 	
-return
-and 	
-continue 	
-for 	
-lambda 	
-try
-except
-as 	
-def 	
-from 	
-nonlocal 	
-while
-assert 	
-del 	
-global 	
-not 	
-with
-async 	
-elif 	
-if 	
-or 	
-yield
+	await 	
+	else 	
+	import 	
+	pass
+	break 	
+	in 	
+	raise
+	class
+	finally 	
+	is 	
+	return
+	and 	
+	continue 	
+	for 	
+	lambda 	
+	try
+	except
+	as 	
+	def 	
+	from 	
+	nonlocal 	
+	while
+	assert 	
+	del 	
+	global 	
+	not 	
+	with
+	async 	
+	elif 	
+	if 	
+	or 	
+	yield
 
 ```
 
