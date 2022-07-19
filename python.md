@@ -78,14 +78,14 @@ lancement d'un script avec  "_$>python nom.py"
 
 	if condition:
 		pass
-	elif:
+	elif condition:
 		pass
 	else:
 		pass
 
 	#-----------------------------------------
 
-	var = 3 if True else 3
+	var = 3 if condition else 3
 
 	#-----------------------------------------
 
