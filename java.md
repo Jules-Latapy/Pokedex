@@ -127,6 +127,7 @@ java Ex args  -> lance la vm sur se fichier
 	public static void main     (String[] args)   		{}
 	public        void procedure(int param,int param2)	{}
 	private       int  function ()						{ return 0 ;}
+	BiFunction<Integer,Integer,Integer> f = (a,b)->{a*b}
 ```
 ----
 ## Package
