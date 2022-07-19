@@ -60,7 +60,7 @@ on lance avec "./execuble.x"
 | symbole | definition |
 |--|--|
 | &&   | et                              |
-| ||   | ou                              |
+| \|\|   | ou                              |
 | ^    | xou                             |
 | !    | non                             |
 |  =   | egalité                         |
