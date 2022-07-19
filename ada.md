@@ -190,6 +190,9 @@ creer ensuite un executable
 ```ada
 
 	raise exception  with "My exception message";
+	
+	-----------------------------------------
+	
 	exception
 		when CONSTRAINT_ERROR => Put_line("erreur utilisateur") ; 
 		when others           => Put_line("erreur inatendu") ;
