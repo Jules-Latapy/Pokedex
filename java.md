@@ -59,6 +59,7 @@ java Ex args  -> lance la vm sur se fichier
 *autre symboles*
 | symbole | definition |
 |--|--|
+|  =  | affectation                  |
 | ->  | lambda                       |
 | ::  | reference a une fonction     |
 | \<T>| generique                    |
@@ -67,7 +68,7 @@ java Ex args  -> lance la vm sur se fichier
 | {}  | section                      |
 | []  | tableau                      |
 | .   | specification                |
-|f:{} | label                        |
+|  :  |	switch/label                 |
 
 ---
 ## Condition
