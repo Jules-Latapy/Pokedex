@@ -84,6 +84,9 @@ on lance avec "./execuble.x"
 |--|--|
 |  =   | affectation                     |
 |  :   | switch/label                    |
+|  ... | swnbr variable d'argument       |
+|  {}  | block                           |
+|  []  | tableau                         |
 |  #   | macro                           |
 |  &   | adresse de ...                  |
 |  ->  | attribut d'une adresse de structure              |
