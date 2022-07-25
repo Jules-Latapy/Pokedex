@@ -34,6 +34,9 @@ on lance avec "./execuble.x"
 	struct aggrega
 	{
 		//aggrega de types
+                //Peut être initialiser comme un tableau {valeur1, valeur2}
+                //Ou avec une initialisation sélective {.attribut=valeur1, attribut2=valeur2}
+                //On peut mélanger les 2 types d'initialisation 
 	};
 
 	union aggrega2{
