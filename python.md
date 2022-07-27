@@ -166,18 +166,27 @@ lancement d'un script avec  "_$>python nom.py"
 	class Etre_Vivant:
 
 		def __init__(self,__nom):
-			self.__nom = __nom   #private members do the same syntax for method
+			self.__nom = __nom   #private as double underscore before name
 
 		def __str__(self):
-			return self.nom 
+			return self.nom
+			
+	class destructible(ABC):
+		
+		@abstractmethod
+		def detruire(self):
+			pass
 
 	#heritage
-	class Animal(Etre_Vivant):
+	class Animal(Etre_Vivant, detruire):
 
 		def __init__(self,nom, posX, posY):
 			super(Animal, self).__init__(nom)
 			self.posX = posX
 			self.posY = posY
+			
+		def detruire(self)
+			print("booom")
 
 		def __str__(self):
 			return super(Animal,self).__str__() + " x:" + str(self.posX) + ",y:"+ str(self.posY)
