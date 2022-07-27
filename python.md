@@ -171,6 +171,7 @@ lancement d'un script avec  "_$>python nom.py"
 		def __str__(self):
 			return self.nom
 			
+	#abstraction
 	class destructible(ABC):
 		
 		@abstractmethod
