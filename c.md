@@ -21,14 +21,14 @@ on lance avec "./execuble.x"
 	long long
 	float
 	double
-	*int pointeur 
-	&addresse
-	*void type incompler
+	*int pointeur //&addresse
+	*void type_incompler
+	int (*pointeur_sur_fonction)(int);	//fonction prennant un int return un int
 ```
 ---
 ## Tableau et collection
 ```C
-	char* s = (char*) malloc (12*sizeof(char*));
+	char* s = (char*) malloc (12*sizeof(char*));	//ne pas oublier de verifier != NULL et de free()
 	char  tab[12] ;
 
 	struct aggrega
@@ -39,12 +39,14 @@ on lance avec "./execuble.x"
 		//On peut mélanger les 2 types d'initialisation 
 	};
 
-	union aggrega2{
+	union aggrega2
+	{
 		//aggrega de types mais qui partage la meme memoire 
 		//chacun peut avoir une valeur a la fois
 	};
 
-	enum enumeration {
+	enum enumeration 
+	{
 		LUNDI,
 		MARDI=2,
 		MERCREDI,
@@ -96,16 +98,19 @@ on lance avec "./execuble.x"
 ---
 ## Condition
 ```C
-	if (condition) {
+	if (condition) 
+	{
 
 	}
-	else{
+	else
+	{
 
 	}
 
 	/*-----------------------------------------*/
 
-	switch( v ){
+	switch( v )
+	{
 		case 3 : printf("3");break;
 		default: printf("default");
 	}
@@ -114,15 +119,18 @@ on lance avec "./execuble.x"
 ### Boucles
 ```C
 
-	while (condition){
+	while (condition)
+	{
 
 	}
 
 	/*-----------------------------------------*/
 	
-	do{
+	do
+	{
 
-	}while(condition);
+	}
+	while(condition);
 
 	/*-----------------------------------------*/
 	
@@ -136,13 +144,15 @@ on lance avec "./execuble.x"
 ### Function/Sous-programme
 ```C
 	
-	void funk(){
+	void funk()
+	{
 
 	}
 	
 	/*-----------------------------------------*/
 
-	int funky(char *c,int... n){
+	int funky(char *c,int... n)
+	{
 		return 3 ;
 	}
 	
@@ -182,8 +192,9 @@ on lance avec "./execuble.x"
 ## mot de language
 ```C
 	auto
+	typedef
 	break	
-	case	
+	case
 	const	
 	continue
 	default	
@@ -193,7 +204,9 @@ on lance avec "./execuble.x"
 	for	
 	goto	
 	if	
+	inline	
 	register	//la variable va dans le CPU plutot que la memoire /!\ on ne peut acceder a l'addresse et elle doit etre local
+	restrict
 	return
 	sizeof	
 	static		//variables persistante jusqu'a la fin du programme
