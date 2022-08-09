@@ -89,7 +89,7 @@ on lance avec "./execuble.x"
 |--|--|
 |  =   | affectation                     |
 |  :   | switch/label                    |
-|  ... | swnbr variable d'argument       |
+|  ... | nbr variable d'argument         |
 |  {}  | block                           |
 |  []  | tableau                         |
 |  #   | macro                           |
@@ -121,14 +121,14 @@ on lance avec "./execuble.x"
 
 	while (condition)
 	{
-
+		/* code */
 	}
 
 	/*-----------------------------------------*/
 	
 	do
 	{
-
+		/* code */
 	}
 	while(condition);
 
@@ -146,7 +146,7 @@ on lance avec "./execuble.x"
 	
 	void funk()
 	{
-
+		/* code */
 	}
 	
 	/*-----------------------------------------*/
@@ -161,8 +161,8 @@ on lance avec "./execuble.x"
 ## Package
 ```C
 
-	#import <librairie.h>
-	#import "userMadePack.h"
+	#include <librairie.h>
+	#include "userMadePack.h"
 
 ```
 ----
