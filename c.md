@@ -21,9 +21,9 @@ on lance avec "./execuble.x"
 	long long
 	float
 	double
-	*int pointeur //&addresse
-	*void type_incompler
-	int (*pointeur_sur_fonction)(int);	//fonction prennant un int return un int
+	int *pointeur //&addresse
+	void *type_incompler
+	int (*pointeur_sur_fonction)(int);	//pointeur sur une fonction prennant un int return un int
 ```
 ---
 ## Tableau et collection
@@ -31,7 +31,7 @@ on lance avec "./execuble.x"
 	char* s = (char*) malloc (12*sizeof(char*));	//ne pas oublier de verifier != NULL et de free()
 	char  tab[12] ;
 
-	struct aggrega
+	struct aggrega1
 	{
 		//aggrega de types
 		//Peut être initialiser comme un tableau {valeur1, valeur2}
