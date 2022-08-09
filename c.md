@@ -166,6 +166,34 @@ on lance avec "./execuble.x"
 
 ```
 ----
+## Préprocesseur
+```C
+
+    #include
+    #define
+    #undef
+    #if
+    #ifdef
+    #ifndef
+    #error
+    #pragma
+    
+    //des variables prédéfinie
+    
+    __FILE__
+    __LINE__
+    __DATE__
+    __TIME__
+    __TIMESTAMP__
+    __STDC__
+    
+    //des opérateurs de macro
+    
+    # macro operator
+    ## macro operator
+
+```
+----
 ## Exception
 ```C
 
