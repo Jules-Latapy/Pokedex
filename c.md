@@ -172,7 +172,7 @@ on lance avec "./execuble.x"
     #include
     #define
     #undef
-    #if
+    #if		#endif  //apres les directive en 'if' placer un endif
     #ifdef
     #ifndef
     #error
