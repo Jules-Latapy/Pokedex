@@ -89,12 +89,13 @@ on lance avec "./execuble.x"
 | symbole | definition |
 |--|--|
 |  =   | affectation                     |
-|  :   | switch/label                    |
+|  :   | switch/label/else ternaire      |
 |  ... | nbr variable d'argument         |
 |  {}  | block                           |
 |  []  | tableau                         |
 |  #   | macro                           |
 |  &   | adresse de ...                  |
+|  ?   | opération ternaire              |
 |  ->  | attribut d'une adresse de structure              |
 ---
 ## Condition
