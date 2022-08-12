@@ -119,6 +119,10 @@ java Ex args  -> lance la vm sur se fichier
 	/*-------------------------------------*/
 
 	for (objet t : iterableCollection) {}
+	
+	/*-------------------------------------*/
+	
+	collection.foreach( variables-> {/*action*/} )
 
 ```
 ----
