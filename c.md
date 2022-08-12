@@ -11,9 +11,10 @@ on lance avec "./execuble.x"
 
 *primitif*
 ```C
+	auto int y;    //variable qui se crée a chaque fois (on force a crée)
+	
 	unsigned 
 	signed
-	auto	    //variable qui se crée a chaque fois (on force a crée)
 	char
 	short
 	int	
@@ -68,7 +69,7 @@ on lance avec "./execuble.x"
 | \|\|   | ou                              |
 | ^    | xou                             |
 | !    | non                             |
-|  =   | egalité                         |
+| ==   | egalité                         |
 | !=   | inegalité                       |
 |  >   | sup                             |
 | >=   | supOuEgal                       |
