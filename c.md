@@ -236,9 +236,9 @@ on lance avec "./execuble.x"
 	for	
 	goto	
 	if	
-	inline	
+	inline		//lorsqu'une fonction est tres simple se mots remplace sont appel par les instruction qui la compose (souvent utiliser avec static)
 	register	//la variable va dans le CPU plutot que la memoire /!\ on ne peut acceder a l'addresse et elle doit etre local
-	restrict
+	restrict	//signifie que ce pointeurs est unique et qu'il n'y aura pas d'autre objet pointant au meme endroit --> alors le compilateur optimisera
 	return
 	sizeof	
 	static		//variables persistante jusqu'a la fin du programme
