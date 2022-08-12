@@ -122,7 +122,7 @@ java Ex args  -> lance la vm sur se fichier
 	
 	/*-------------------------------------*/
 	
-	collection.foreach( variables-> {/*action*/} )
+	collection.forEach( variables-> {/*action*/} )
 
 ```
 ----
