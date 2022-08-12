@@ -11,8 +11,7 @@ on lance avec "./execuble.x"
 
 *primitif*
 ```C
-	auto int y;    //variable qui se crée a chaque fois (on force a crée)
-	
+	static int d ; //variables persistante qui reste donc jusqu'à la fin du programme
 	unsigned 
 	signed
 	char
@@ -221,7 +220,7 @@ on lance avec "./execuble.x"
 ```
 ## mot de language
 ```C
-	auto
+	auto		//inutile "durée de vie automatique" => destruction de la variable à la fin du scope, Le mot-clé ne sert à rien vu que c'est le comportement par défaut
 	typedef
 	break	
 	case
