@@ -144,6 +144,9 @@ on lance avec "./execuble.x"
 ----
 ### Function/Sous-programme
 ```C
+	static void privateFunctionOnlyWhereItsDefined(){}
+	
+	/*-----------------------------------------*/
 	
 	void funk()
 	{
