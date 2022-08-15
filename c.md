@@ -3,7 +3,7 @@
 ---
 ## Compilation & lancement
 
-"gcc leProgramme.c -o execuble.x"
+on compile avec "gcc leProgramme.c -o execuble.x"\
 on lance avec "./execuble.x"
 
 ---
