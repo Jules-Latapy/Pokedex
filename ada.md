@@ -260,7 +260,7 @@ creer ensuite un executable
      
 	end Object_Pack2 ;
 ```
-## mot de language
+## Mot de language
 ```ada
 	synchronized (Ada 2005)	--qui ne peux etre implementé que par des taches
 	abstract (Ada 95)
