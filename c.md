@@ -221,7 +221,7 @@ on lance avec "./execuble.x"
 			//seulement les PID change
 
 ```
-## mot de language
+## Mot de language
 ```C
 	auto		//inutile "durée de vie automatique" => destruction de la variable à la fin du scope, Le mot-clé ne sert à rien vu que c'est le comportement par défaut
 	typedef
