@@ -3,8 +3,8 @@
 ---
 ## Compilation & lancement
 
-compilation avec gnat (gcc -c) -> gnatmake Dico.adb\
-creer ensuite un executable
+on compile avec gnat ou 'gcc -c' "gnatmake leProgramme.adb\
+on lance avec "./execuble.x"
 
 ---
 ## Types
@@ -36,6 +36,7 @@ creer ensuite un executable
 	type Liste is array (Mois range <>) of Natural ;
 	type Matrice is array (1..2 , 1..5) of Natural := (others=>(others=>0));
 	type Jour is (Lundi,Mardi,Mecredi,Jeudi,Vendredi,Samedi,Dimanche);
+	subtype week_end is Jour range Samedi .. dimanche ; --type defini a partie d'un autre
 	type Date is record 
 		--aggrega de type
 	end record ;
@@ -86,14 +87,14 @@ creer ensuite un executable
 ## Condition
 ```ada
 	if (condition) then
-     
+     		--code
 	elsif
-     
+     		--code
 	else
-		
+		--code
 	end if;
 
-	-----------------------------------------switch
+	-----------------------------------------
 	case int is
 		when 0 | 360 =>
 			Put_Line (" 0 ou 360 ");
@@ -110,41 +111,41 @@ creer ensuite un executable
 ```ada
 
 	while loop
-		
+		--code
 	end loop;
 
 	-----------------------------------------
 	
 	for i in 0..10 loop
-		
+		--code
 	end loop;
 
 	-----------------------------------------
 	
 	for T of Liste loop
-		
+		--code
 	end loop;
 
 	-----------------------------------------
 	
 	loop
-		
+		--code
 	end loop;
 ```
 ----
 ### Function/Sous-programme
 ```ada
 	procedure pro is
-		
+		--var
 	begin
-		
+		--code
 	end pro ;
 	
 	-----------------------------------------
 
 	function funk return Integer is
-		
-	begin -- funk
+		--var
+	begin
 		return 3 ;
 	end funk;
 	
@@ -170,10 +171,14 @@ creer ensuite un executable
 		--corps des function
 	end pack;
 
+	-----------------------------------------
+	
+	with pack ; use pack
 
 	-----------------------------------------sur le même principe:
-
-	Generic --si un package est generic --> il doit etre instancié
+	
+	--si un package est generic --> il doit etre instancié
+	Generic 
 		--le type generic
 	package F is
 		--maquettes, types, variables globales
@@ -183,7 +188,8 @@ creer ensuite un executable
 
 	-----------------------------------------
 	
-	with # use #
+	package instance is new f(integer);
+	use instance ;
 ```
 ----
 ## Exception
@@ -224,7 +230,7 @@ creer ensuite un executable
 		--autre instruction 
 ```
 ----
-## OBJET
+## Objet
 ```ada
 	package Object_Pack is
      
