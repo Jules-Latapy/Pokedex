@@ -57,6 +57,7 @@ on lance avec "./execuble.x"
 	}
 
 	//on peut utiliser typedef pour ne pas avoir a repeter le type de base (struct, enum, union)
+	//on peut avoir une structure/union anonyme comme ceci (struct exemple){attr1='r',2,3,4}
 ```
 ---
 ## Expression
@@ -101,11 +102,11 @@ on lance avec "./execuble.x"
 ```C
 	if (condition) 
 	{
-
+		/* code */
 	}
 	else
 	{
-
+		/* code */
 	}
 
 	/*-----------------------------------------*/
@@ -170,7 +171,7 @@ on lance avec "./execuble.x"
 
 ```
 ----
-## Préprocesseur
+## Préprocesseur/Macro
 ```C
 
     #include
@@ -200,13 +201,14 @@ on lance avec "./execuble.x"
 ----
 ## Exception
 ```C
-
+	//type d'erreur
+	
 	errno=	EAGAIN
-			EBADF
-			EDOM
-			EFAULT
-			EIO
-			ERANGE
+		EBADF
+		EDOM
+		EFAULT
+		EIO
+		ERANGE
 	
 	/*-----------------------------------------*/
 	
