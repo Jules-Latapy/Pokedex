@@ -201,9 +201,9 @@ java Ex args  -> lance la vm sur se fichier
 			@Override
 			Integer detruire(){return 3;}
 		}
-
-	/*---------------------mot de language----------------*/
-
+```
+## Mot de language
+```java
 	abstract	
 	continue	
 	for	
@@ -245,3 +245,4 @@ java Ex args  -> lance la vm sur se fichier
 	super
 	this
 	while
+```
