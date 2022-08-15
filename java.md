@@ -143,6 +143,21 @@ java Ex args  -> lance la vm sur se fichier
 
 ```
 ----
+## Préprocesseur/Macro
+```java
+	//les préprocesseur sont en quelque sorte les annotations 
+	
+	@SuppressWarnings("deprecation")
+	
+	//on peut en créée nous même mais elle ne feront rien 
+
+	@Target({TYPE, FIELD, METHOD, PARAMETER, CONSTRUCTOR, LOCAL_VARIABLE})
+	@Retention(RetentionPolicy.SOURCE)
+	public @interface annotPersonnalisé {
+	    String[] value();	//les attributs on des parentheses
+	}
+```
+----
 ## Exception
 ```java
 	public void methode1() throws Exception ;
@@ -172,7 +187,7 @@ java Ex args  -> lance la vm sur se fichier
 	volatile     //la variables doit toujours etre lus a nouveau a partir de la memoire centrale avant les operations
 ```
 ----
-## OBJET
+## Objet
 ```java
 		//il y a
 		class/enum/record
