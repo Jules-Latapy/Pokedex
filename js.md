@@ -81,49 +81,157 @@
 		while(true){
 
 		}
+		
+		/*-----------------------------------------*/
 
 		do{
 
 		}while();
+		
+		/*-----------------------------------------*/
 
 		for (var i = 0; i < Things.length; i++) {
 			Things[i]
 		}
+		
+		/*-----------------------------------------*/
 
 		for (var i in collection) {
 			
 		}
+		
+		/*-----------------------------------------*/
 
 		for(var i of collection) {
 			
 		}
+		
+		/*-----------------------------------------*/
 
 		collection.forEach();
 ```
 ----
 ### Function/Sous-programme
 ```js
-		function function_name(argument) {
-			// body...
-		}
+	function funk(...argument) {
+		// body...
+	}
+	
+	/*-----------------------------------------*/
+	
+	function funky(...argument) {
+		// body...
+	}
+	
+	/*-----------------------------------------*/
+	
+	(arg1,arg2) => {
+		/*function anonyme le mot-clef 'function' est optionnel avant les parentheses*/
+	}
 ```
+----
+## Package
+```js
+	//on met export devant chaque element a exporter
+	
+	export function funky(arg1){
+	
+	}
+	
+	//ou alors on utilise le mots export devant un groupe
+	
+	export { variable, fonction, classes, etc };
+	
+	/*-----------------------------------------*/
+	
+	import { variable, fonction, classes, etc } from 'modul_name.js'
+	
+```
+----
+## Exception
+```js
+	try {
+	
+	}
+	catch(err) {
+	
+	}
+	finally {
 
-UNFINISHED...
-	/*--------------------package-------------------------*/
+	}
+	
+	/*-----------------------------------------*/
 
-	/*--------------------Exception-----------------------*/
-		try{
-
-		}catch(error)
-
-		throw new Error("la erreur");
-
-	/*--------------------Multithread/task----------------*/
-
-	/*----------------------------------------------------*/
-	/*                    Objet                           */
-	/*----------------------------------------------------*/
-
-	/*--------------------heritage------------------------*/
-
-	/*--------------------mot de language-----------------*/
+	throw new Error('Exception message');	//on est pas obligé de throw des Error (chaines, objet, etc...)
+```
+----
+## Multithread/task
+```js
+```
+## Mot de language
+```js
+	abstract	
+	arguments	
+	await*	
+	boolean
+	break	
+	byte	
+	case	
+	catch
+	char	
+	class
+	const	
+	continue
+	debugger	
+	default	
+	delete	
+	do
+	double	
+	else	
+	enum
+	eval
+	export
+	extends	
+	false	
+	final
+	finally	
+	float	
+	for	
+	function
+	goto	
+	if	
+	implements	
+	import
+	in	
+	instanceof	
+	int	
+	interface
+	let
+	long	
+	native	
+	new
+	null	
+	package	
+	private	
+	protected
+	public	
+	return	
+	short	
+	static
+	super
+	switch	
+	synchronized	
+	this
+	throw	
+	throws	
+	transient	
+	true
+	try	
+	typeof	
+	var	
+	void
+	volatile	
+	while	
+	with	
+	yield
+```
