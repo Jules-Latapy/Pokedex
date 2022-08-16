@@ -10,12 +10,16 @@ on lance avec "./leProgramme.x"
 
 *primitif*
 ```rust
-  //il y a des entier de i8 a isize
-  //et non signé de u8 a usize
+	//typage non obligatoire
+	//les variables ne sont pas mutables par defaut 
+	//immutables != constantes
+  	//type d'entier : [i8,i16,i32,i64,i128,isize]
   
-  i      :i32 ;
-	str    :String = "sss";
-  
+	let i    :i32 ;
+	let str  :String = "sss";
+	
+	let mut var = 0 ; //mutable
+	const c     = 3 ;
 ```
 ---
 ## Tableau et collection
