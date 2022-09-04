@@ -167,7 +167,10 @@ on lance avec "./execuble.x"
 ```C
 
 	#include <librairie.h>
-	#include "userMadePack.h"
+	#include "userMadePack.h"	
+	
+	//les fichiers header ne servent normalement uniquement qu'a avoir les prototypes de fonctions les corps se trouvent dans des fichiers ".c"
+	//on pourrait direct mettre le prototypes dans le fichier qui les imports ca ferait pareil
 
 ```
 ----
@@ -245,7 +248,7 @@ on lance avec "./execuble.x"
 	sizeof	
 	static		//variables persistante jusqu'a la fin du programme
 	switch	
-	volatile	//empeche l'optimisation du code de la variable
+	volatile	//empeche l'optimisation du code de la variable car modifiables de l'exterieur
 	while
 ```
 
