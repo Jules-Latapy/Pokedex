@@ -31,13 +31,18 @@ on lance avec "./execuble.x"
 	char* s = (char*) malloc (12*sizeof(char*));	//ne pas oublier de verifier != NULL et de free()
 	char  tab[12] ;
 
+	// POUR LES DEUX TYPES QUI SUIVENT:
+	//  Peuvent être initialiser comme un tableau "(struct nom){valeur1, valeur2}",
+	//  ou avec une initialisation sélective      "(struct nom){.attribut=valeur1, .attribut2=valeur2}",
+	//  on peut mélanger les 2 types d'initialisation,
+	//  on accede a un element avec un point: "nom.attribut",
+	//  si l'element est un pointeur on peut utiliser la fleche plutot que de s'embeter avec les parenthese et les '&' pour acceder a un element.
+
 	struct aggrega1
 	{
 		//aggrega de types
-		//Peut être initialiser comme un tableau {valeur1, valeur2}
-		//Ou avec une initialisation sélective {.attribut=valeur1, .attribut2=valeur2}
-		//On peut mélanger les 2 types d'initialisation 
-	};
+		
+	}var1,var2; //pas obligatoire hein
 
 	union aggrega2
 	{
@@ -54,10 +59,9 @@ on lance avec "./execuble.x"
 		VENDREDI,
 		SAMEDI,
 		DIMANCHE;
-	}
+	};
 
 	//on peut utiliser typedef pour ne pas avoir a repeter le type de base (struct, enum, union)
-	//on peut avoir une structure/union anonyme comme ceci (struct exemple){attr1='r',2,3,4}
 ```
 ---
 ## Expression
