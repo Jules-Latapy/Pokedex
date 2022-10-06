@@ -6,6 +6,7 @@ se sont des fichiers markdown avec 12 section
 
 * Compilation
 * Types
+* Tableau et collection
 * Expression
 * Condition
 * Boucles
