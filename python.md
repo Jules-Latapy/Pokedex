@@ -11,6 +11,7 @@ lancement d'un script avec  "_$>python nom.py"
 
 *primitif*
 ```python
+	#de manière general le typage ne sert absolument à rien
 	b :bool      = True 
 	by:bytes     = 0    
 	i :int       = 3    
@@ -60,7 +61,7 @@ lancement d'un script avec  "_$>python nom.py"
 |  //  | division reel                   |
 |  **  | puisssance                      |
 |  %   | modulo                          |
-|  @   | multiplication matriciel        |
+|  @   | multiplication matriciel ou decorateur       |
 |  &   | 'et' bit a bit                  |
 | \|   | 'ou' bit a bit (aussi union)    |
 
@@ -103,7 +104,10 @@ lancement d'un script avec  "_$>python nom.py"
 
 	for x in range(10):
 		pass
-
+	else:
+		#not entered the loop
+		
+	my_list = [expression for number in range(1, 10)]
 ```
 ----
 ### Function/Sous-programme
