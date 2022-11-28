@@ -86,9 +86,9 @@ on lance avec "./execuble.x"
 ---
 ## Condition
 ```ada
-	if (condition) then
+	if condition then
      		--code
-	elsif
+	elsif condition then
      		--code
 	else
 		--code
@@ -110,7 +110,7 @@ on lance avec "./execuble.x"
 ### Boucles
 ```ada
 
-	while loop
+	while condition loop
 		--code
 	end loop;
 
