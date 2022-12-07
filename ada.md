@@ -131,6 +131,12 @@ on lance avec "./execuble.x"
 	loop
 		--code
 	end loop;
+	
+	-----------------------------------------
+	-- evaluation de liste 
+	(for some x in Liste => x>2)	--si un seul correspond alors vrai
+	(for all  y in Liste => x<3)	--si tous correspondent alors vrai
+	
 ```
 ----
 ### Function/Sous-programme
