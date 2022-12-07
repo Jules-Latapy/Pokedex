@@ -82,6 +82,7 @@ on lance avec "./execuble.x"
 | =>   | selection (switch/exception)    |
 |<\<a>>| flags (pour les goto)           |
 | <>   | type non contraint              |
+|  @   | resultat dans un calcul '+=' -> ':=@+' |
 
 ---
 ## Condition
@@ -134,8 +135,10 @@ on lance avec "./execuble.x"
 	
 	-----------------------------------------
 	-- evaluation de liste 
-	(for some x in Liste => x>2)	--si un seul correspond alors vrai
-	(for all  y in Liste => x<3)	--si tous correspondent alors vrai
+	(for some x in Liste => x>2);	--si un seul correspond alors vrai
+	(for all  y in Liste => x<3);	--si tous correspondent alors vrai
+	
+	Liste := [for J in 0..7 => J*8, others => 0];
 	
 ```
 ----
