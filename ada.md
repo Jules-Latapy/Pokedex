@@ -79,6 +79,7 @@ on lance avec "./execuble.x"
 |  #   | base comme 2#1110_0000#         |
 |  '   | attribut defini par le language |
 |  .   | spécification                   |
+|  ..  | range		                 |
 | =>   | selection (switch/exception)    |
 |<\<a>>| flags (pour les goto)           |
 | <>   | type non contraint              |
