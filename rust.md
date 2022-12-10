@@ -25,6 +25,7 @@ on lance avec "./leProgramme.x"
 ## Tableau et collection
 ```rust
   let v : (u32,String,i32) = (25,"something",48) ;
+  //acces par v.1
   
   //deconstruction du tuple
   let (x, y, z) = v ;
@@ -79,9 +80,20 @@ on lance avec "./leProgramme.x"
 ## Condition
 ```rust
 
-  if (bool) {
-    //code...
-  }
+	if bool {
+		/* code */
+	}
+
+	variable = if condition { valeur } else { return valeur };
+
+	/*-----------------------------------------*/
+	
+	match value {
+		1=>expression,
+		2|3=>expression,
+		3..6=>expression
+		_=>defaut,
+	}
   
 ```
 ---
@@ -89,15 +101,28 @@ on lance avec "./leProgramme.x"
 ```rust
 
 	loop {
-     //code...
+     		/* code */
 	}
   
-	/*-------------------------------------*/
+	/*-----------------------------------------*/
+	
+	while condition {
+		/* code */
+	}
+	
+	/*-----------------------------------------*/
+	
+	for element in collection {
+		/* code */
+	}
 
 ```
 ----
 ### Function/Sous-programme
 ```rust
+	fn funk(i:i32) {}
+	
+	fn funk(i:i32)->f64 { 5 }
 ```
 ----
 ## Package
