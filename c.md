@@ -28,7 +28,7 @@ on lance avec "./execuble.x"
 ---
 ## Tableau et collection
 ```C
-	char* s = (char*) malloc (12*sizeof(char*));	//ne pas oublier de verifier != NULL et de free()
+	char* s = (char*) malloc (12*sizeof(char));	//ne pas oublier de verifier != NULL et de free()
 	char  tab[12] ;
 
 	// POUR LES DEUX TYPES QUI SUIVENT:
