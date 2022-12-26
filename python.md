@@ -3,7 +3,7 @@
 ---
 ## lancement
 
-lancement en ligne de commande avec juste "_$>python"
+lancement en ligne de commande avec juste "_$>python"\
 lancement d'un script avec  "_$>python nom.py"
 
 ---
