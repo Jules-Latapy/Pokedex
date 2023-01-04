@@ -160,10 +160,15 @@ on lance avec "./execuble.x"
 	
 	/*-----------------------------------------*/
 
-	int funky(char *c,int... n)
+	int funky(char *c, int... n)
 	{
 		return 3 ;
 	}
+	
+	/*-----------------------------------------*/
+	
+	#define VAR_NAME(v)\
+			(#v)
 	
 ```
 ----
@@ -180,29 +185,36 @@ on lance avec "./execuble.x"
 ----
 ## Préprocesseur/Macro
 ```C
+	/*
+	le preprocesseur remplace directement le code
+	par exemple 
+	#define TAILLE 4 n'est pas une variable et n'a pas d'addresse
+	TAILLE va etre remplacer par 4 dans tout le programme
+	pour ecrire en plusieur ligne on utilise \
+	*/
 
-    #include
-    #define
-    #undef
-    #if		#endif  //apres les directive en 'if' placer un endif
-    #ifdef
-    #ifndef
-    #error
-    #pragma
+	#include
+	#define
+	#undef
+	#if		#endif  //apres les directive en 'if' placer un endif
+	#ifdef
+	#ifndef
+	#error
+	#pragma
     
-    //des variables prédéfinie
+	//des variables prédéfinie
     
-    __FILE__
-    __LINE__
-    __DATE__
-    __TIME__
-    __TIMESTAMP__
-    __STDC__
+	__FILE__
+	__LINE__
+	__DATE__
+	__TIME__
+	__TIMESTAMP__
+	__STDC__
     
-    //des opérateurs de macro
+	//des opérateurs de macro
     
-    # macro operator
-    ## macro operator
+	# macro operator
+	## macro operator concatenation
 
 ```
 ----
