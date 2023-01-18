@@ -72,7 +72,7 @@ java Ex args  -> lance la vm sur se fichier
 | symbole | definition |
 |--|--|
 |  =  | affectation                  |
-| ->  | lambda                       |
+| ->  | lambda / nouveau switch      |
 | ::  | reference a une fonction     |
 | \<T>| generique                    |
 | ... | nombre variables d'arguments |
@@ -81,6 +81,7 @@ java Ex args  -> lance la vm sur se fichier
 | []  | tableau                      |
 | .   | specification                |
 |  :  |	switch/label/else ternaire   |
+| ?   | operation ternaire           |
 
 ---
 ## Condition
