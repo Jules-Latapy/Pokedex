@@ -53,8 +53,20 @@ java Ex args  -> lance la vm sur se fichier
 | *  | multiplication               |
 | /  | division                     |
 | %  | modulo                       |
-| i++| ajout 1 direct               |
-| += | ajout direct                 |
+| i++| ajout 1, donne la valeur     |
+| ++i| donne la valeur, ajout 1     |
+| += | ajout direct(même chose avec les autres opérateur) |
+
+*operateur binaire*
+| symbole | definition |
+|--|--|
+| >>  | decalement binaire droite   			|
+| <<  | decalement binaire gauche   			|
+| <<< | decalement binaire gauche(non signé)            |
+| |   | ou binaire            				|
+| &   | et binaire                    			|
+| ^   | xou binaire    					|
+| ~   | complement binaire    				|
 
 *autre symboles*
 | symbole | definition |
@@ -68,7 +80,7 @@ java Ex args  -> lance la vm sur se fichier
 | {}  | section                      |
 | []  | tableau                      |
 | .   | specification                |
-|  :  |	switch/label                 |
+|  :  |	switch/label/else ternaire   |
 
 ---
 ## Condition
