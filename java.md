@@ -63,7 +63,7 @@ java Ex args  -> lance la vm sur se fichier
 | >>  | decalement binaire droite   			|
 | <<  | decalement binaire gauche   			|
 | <<< | decalement binaire gauche(non signé)            |
-| |   | ou binaire            				|
+| \|  | ou binaire            				|
 | &   | et binaire                    			|
 | ^   | xou binaire    					|
 | ~   | complement binaire    				|
