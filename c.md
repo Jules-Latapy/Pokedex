@@ -70,8 +70,8 @@ on lance avec "./execuble.x"
 | symbole | definition |
 |--|--|
 | &&   | et                              |
-| \|\|   | ou                              |
-| ^    | xou                             |
+| \|\|   | ou                            |
+| ^    | xou (binaire aussi)             |
 | !    | non                             |
 | ==   | egalité                         |
 | !=   | inegalité                       |
@@ -83,11 +83,23 @@ on lance avec "./execuble.x"
 *operateur mathématique*
 | symbole | definition |
 |--|--|
-|  +   | addition                        |
-|  -   | negation                        |
-|  *   | multiplication                  |
-|  /   | division                        |
-|  %   | modulo                          |
+|  +   | addition                     |
+|  -   | negation                     |
+|  *   | multiplication               |
+|  /   | division                     |
+|  %   | modulo                       |
+| i++  | ajout 1, donne la valeur     |
+| ++i  | donne la valeur, ajout 1     |
+| +=   | ajout direct(même chose avec les autres opérateur) |
+
+*operateur binaire*
+| symbole | definition |
+|--|--|
+| >>  | decalement binaire droite   			|
+| <<  | decalement binaire gauche   			|
+| \|  | ou binaire            				|
+| &   | et binaire                    			|
+| ~   | complement binaire    				|
 
 *autre symboles*
 | symbole | definition |
