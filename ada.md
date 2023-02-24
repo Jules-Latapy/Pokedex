@@ -77,7 +77,7 @@ on lance avec "./execuble.x"
 |  :   | nommage (variables/label)       |
 |  &   | concatenation                   |
 |  #   | base comme 2#1110_0000#         |
-|  '   | attribut defini par le language |
+|  '   | caractere/attribut defini par le language |
 |  .   | spécification                   |
 |  ..  | range		                 |
 | =>   | selection (switch/exception)    |
