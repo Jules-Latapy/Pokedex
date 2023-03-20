@@ -3,8 +3,8 @@
 ---
 ## Compilation & lancement
 
-on compile avec gnat ou 'gcc -c' "gnatmake leProgramme.adb\
-on lance avec "./execuble.x"
+on compile avec gnat ou `gcc -c` `gnatmake leProgramme.adb`\
+on lance avec `./execuble.x`
 
 ---
 ## Types
@@ -34,7 +34,7 @@ on lance avec "./execuble.x"
 ## Tableau et collection
 ```ada
 	type Liste is array (Mois range <>) of Natural ;
-	type Matrice is array (1..2 , 1..5) of Natural := (others=>(others=>0));
+	Matrice : array (1..2 , 1..5) of Natural := (others=>(others=>0));
 	type Jour is (Lundi,Mardi,Mecredi,Jeudi,Vendredi,Samedi,Dimanche);
 	subtype week_end is Jour range Samedi .. dimanche ; --type defini a partie d'un autre
 	type Date is record 
@@ -138,9 +138,6 @@ on lance avec "./execuble.x"
 	-- evaluation de liste 
 	(for some x in Liste => x>2);	--si un seul correspond alors vrai
 	(for all  y in Liste => x<3);	--si tous correspondent alors vrai
-	
-	Liste := [for J in 0..7 => J*8, others => 0];
-	
 ```
 ----
 ### Function/Sous-programme
