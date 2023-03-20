@@ -3,8 +3,8 @@
 ---
 ## Compilation & lancement
 
-on compile avec "gcc leProgramme.c -o execuble.x"\
-on lance avec "./execuble.x"
+on compile avec `gcc -Wall leProgramme.c -o execuble.x`\
+on lance avec `./execuble.x`
 
 ---
 ## Types
@@ -25,26 +25,15 @@ on lance avec "./execuble.x"
 	void *type_incompler
 	int (*pointeur_sur_fonction)(int);	//pointeur sur une fonction prennant un int return un int
 ```
----
-## Tableau et collection
-```C
-	char* s = (char*) malloc (12*sizeof(char));	//ne pas oublier de verifier != NULL et de free()
-	char  tab[12] ;
-
-	// POUR LES DEUX TYPES QUI SUIVENT:
-	//  Peuvent être initialiser comme un tableau "(struct nom){valeur1, valeur2}",
-	//  ou avec une initialisation sélective      "(struct nom){.attribut=valeur1, .attribut2=valeur2}",
-	//  on peut mélanger les 2 types d'initialisation,
-	//  on accede a un element avec un point: "nom.attribut",
-	//  si l'element est un pointeur on peut utiliser la fleche plutot que de s'embeter avec les parenthese et les '&' pour acceder a un element.
-
-	struct aggrega1
+*defini par l'utilisateur*
+```c
+	struct agrega1
 	{
 		//aggrega de types
 		
-	}var1,var2; //pas obligatoire hein
+	}var1,var2;
 
-	union aggrega2
+	union agrega2
 	{
 		//aggrega de types mais qui partage la meme memoire 
 		//chacun peut avoir une valeur a la fois
@@ -62,6 +51,19 @@ on lance avec "./execuble.x"
 	};
 
 	//on peut utiliser typedef pour ne pas avoir a repeter le type de base (struct, enum, union)
+	typedef union agrega2 agrega2;
+	
+	struct agrega1 a1 = (struct agrega1){valeur1, valeur2};
+	struct agrega1 a2 = (struct agrega1){.attribut=valeur1, .attribut2=valeur2};
+	//  on accede a un element avec un point: "nom.attribut"
+	//  si l'element est un pointeur on peut utiliser la fleche plutot que de s'embeter avec les parenthese et les '&' pour acceder a un element.
+```
+---
+## Tableau et collection
+```C
+	char* s = (char*) malloc (12*sizeof(char));	//ne pas oublier de verifier != NULL et de free()
+	char  tab[4] = {'h','e','l','l'};
+	// un tableau est en realité un pointeur sur son premier element
 ```
 ---
 ## Expression
@@ -225,8 +227,8 @@ on lance avec "./execuble.x"
     
 	//des opérateurs de macro
     
-	# macro operator
-	## macro operator concatenation
+	# macro operator //transforme en chaine
+	## macro operator concatenation //fusionne les 2 côtés
 
 ```
 ----
