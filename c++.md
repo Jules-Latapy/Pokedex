@@ -163,66 +163,25 @@ on lance avec `a.exe`
 
   //surcharge d'operateur
   int operator +(int a, int b) {return 2;}
-
-//tt les operateurs surchargeables
- a = b
-a += b
-a -= b
-a *= b
-a /= b
-a %= b
-a &= b
-a |= b
-a ^= b
-a <<= b
-a >>= b
-
-++a
---a
-a++
-a--
-
-+a
--a
-a + b
-a - b
-a * b
-a / b
-a % b
-~a
-a & b
-a | b
-a ^ b
-a << b
-a >> b
-
-!a
-a && b
-a || b
-
-a == b
-a != b
-a < b
-a > b
-a <= b
-a >= b
-a <=> b
-
-a[...]
-*a
-&a
-a->b
-a.b
-a->*b
-a.*b
-
-function call
-a(...)
-comma
-a, b
-conditional
-a ? b : c
 ```
+*tt les operateurs surchargeables*
+| assignment | increment/decrement | arithmetic | logical  | comparison | member/access | other        |
+|------------|---------------------|------------|----------|------------|---------------|--------------|
+|  a = b     |                     | +a         |          |            |               |              |
+| a += b     |                     | -a         |          |            |               |              |
+| a -= b     |                     | a + b      |          |            |               |              |
+| a *= b     | ++a                 | a - b      | !a       | a == b     | a[...]        | appel de fct |
+| a /= b     | --a                 | a * b      | a && b   | a != b     | *a            | a(...)       |
+| a %= b     | a++                 | a / b      | a \|\| b | a < b      | &a            | virgule      |
+| a &= b     | a--                 | a % b      |          | a > b      | a->b          | a, b         |
+| a \|= b    |                     | \~a        |          | a <= b     | a.b           | conditional  |
+| a ^= b     |                     | a & b      |          | a >= b     | a->*b         | a ? b : c    |
+| a <<= b    |                     | a \| b     |          | a <=> b    | a.*b          |              |
+| a >>= b    |                     | a ^ b      |          |            |               |              |
+|            |                     | a << b     |          |            |               |              |
+|            |                     | a >> b     |          |            |               |              |
+
+
 ---
 ## Packages
 ```cpp
