@@ -97,6 +97,13 @@ on lance avec `./execuble.x`
 	end if;
 
 	-----------------------------------------
+
+	t:integer:=(	if bool
+			then 0
+			else 3);
+
+	-----------------------------------------
+
 	case int is
 		when 0 | 360 =>
 			Put_Line (" 0 ou 360 ");
@@ -107,6 +114,13 @@ on lance avec `./execuble.x`
 		when others =>
 			Put_Line ("Autre");
 	end case;
+
+	-----------------------------------------
+
+	Hours := (case D is
+			when Mon .. Thurs => 8,
+               		when Fri => 6,
+               		when Sat | Sun => 0);
 ```
 ---
 ### Boucles
@@ -163,6 +177,13 @@ on lance avec `./execuble.x`
 	-----------------------------------------
 
 	procedure ProcedureInParameter( Process  : access procedure (int : integer) ) ;
+
+	-----------------------------------------
+	--return statement
+	return Node : Cell do
+		Node.Value := Result;
+		Node.Succ := Next_Node;
+	end return;
 ```
 ----
 ## Package
