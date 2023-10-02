@@ -12,6 +12,7 @@ on lance avec `./execuble.x`
 *primitif*
 ```C
 	static int d ; //variables persistante qui reste donc jusqu'à la fin du programme
+	register int i;//variable sans adresse, sert à optimiser, le compilo le fait seul
 	unsigned 
 	signed
 	char
@@ -21,8 +22,8 @@ on lance avec `./execuble.x`
 	long long
 	float
 	double
-	int *pointeur //&addresse
-	void *type_incompler
+	int* pointeur
+	void* type_incompler
 	int (*pointeur_sur_fonction)(int);	//pointeur sur une fonction prennant un int return un int
 ```
 *defini par l'utilisateur*
@@ -192,9 +193,12 @@ on lance avec `./execuble.x`
 	#include <librairie.h>
 	#include "userMadePack.h"	
 	
-	//les fichiers header ne servent normalement uniquement qu'a avoir les prototypes de fonctions les corps se trouvent dans des fichiers ".c"
-	//on pourrait direct mettre le prototypes dans le fichier qui les imports ca ferait pareil
+	//les fichiers header ne servent uniquement qu'a avoir les prototypes de fonctions, les corps se trouvent dans des fichiers ".c"
 
+	#ifndef HEADER_GUARD
+	#define HEADER_GUARD
+		//code
+	#endif
 ```
 ----
 ## Préprocesseur/Macro
@@ -210,7 +214,8 @@ on lance avec `./execuble.x`
 	#include
 	#define
 	#undef
-	#if		#endif  //apres les directive en 'if' placer un endif
+	#if
+	#endif  //apres les directive en 'if' placer un endif
 	#ifdef
 	#ifndef
 	#error
@@ -258,7 +263,7 @@ on lance avec `./execuble.x`
 ```
 ## Mot de language
 ```C
-	auto		//inutile "durée de vie automatique" => destruction de la variable à la fin du scope, Le mot-clé ne sert à rien vu que c'est le comportement par défaut
+	auto		//devine le type
 	typedef
 	break	
 	case
