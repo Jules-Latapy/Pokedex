@@ -3,8 +3,8 @@
 ---
 ## Compilation & lancement
 
-on compile avec gnat ou `gcc -c` `gnatmake leProgramme.adb`\
-on lance avec `./execuble.x`
+on compile avec gnat ou `gcc -c leProgramme.adb` / `gnatmake leProgramme.adb`\
+on lance avec `./leProgramme.x`
 
 ---
 ## Types
