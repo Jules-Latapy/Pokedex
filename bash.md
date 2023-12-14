@@ -35,6 +35,7 @@ BLOCK_COMMENT
 	!!		 #derniere commande
 
 	variable=false
+	readonly const=3
 ```
 ---
 ## Tableau et collection
@@ -48,12 +49,12 @@ BLOCK_COMMENT
 *operateur booleen*
 
 | symbole | definition |
-|--|--|
+| ---- | ------------------------------- |
 | &&   | et                              |
-| \|\|   | ou                              |
+| \|\| | ou                              |
 | ^    | xou                             |
 | !    | non                             |
-| ˽=˽ | egalité                         |
+| ˽=˽   | egalité                         |
 | !=   | inegalité                       |
 |  >   | sup                             |
 | >=   | supOuEgal                       |
@@ -74,6 +75,7 @@ BLOCK_COMMENT
 
 | option | signifie |
 | ------ | -------- |
+| -z  | zero
 | -eq | equal
 | -ne | not equal
 | -gt | greater than
@@ -94,15 +96,15 @@ BLOCK_COMMENT
 *parenthèses*
 
 | symbole                                   | precision |
-| -----------------------------------------	|--- |
+| -----------------------------------------	| --------- |
 | ( subshell )                          	| |
 | (( integer_arythmetic ))              	| |
 | $(( integer_arythmetic_with_result )) 	| |
 | <( file-like-result )                 	| |
-| array_like_var=($( COMMAND ))         	| |
-| \$( COMMAND )$?                        	| |
+| array_like_var=($( command ))         	| |
+| \$( command )$?                        	| |
 | "$( interpolation )"                  	| |
-| \[ 7 -ne 8 ]                           	| remplace les arguments avec des jokers dedans \*.txt par | exemple, equivaut à la commande `test` |
+| \[ 7 -ne 8 ]                           	| remplace les arguments avec des jokers dedans \*.txt |
 | \[\[ 7 -ne 8 ]]                         	| ne remplace pas les arguments avec des jokers |
 | echo "list "{destructuration, spreading}  | |
 | {0..10}                                   | same with range |
@@ -121,6 +123,19 @@ BLOCK_COMMENT
 | echo ${url/https/ftp} |  |
 | echo ${url/[aeiou]/X} |  |
 | ${!name}              |  |
+
+*flux*
+
+| symbol | def |
+| ------ | --- |
+| <      | redirige l'entrée standard |
+| >      | redirige la sortie standard |
+| >>     | redirige la sortie standard en écrasant |
+| <<     |  |
+| <<<    |  |
+| 0>     | redirige la sortie standard |
+| 1>     | redirige l'entrée standard  |
+| 2>     | redirige la sortie d'erreur |
 
 ---
 ## Condition
