@@ -40,7 +40,7 @@ on lance avec `leProgramme.exe`
 ## Tableau et collection
 ```haskell
    list::[a]
-   a = ["hello", "world"]
+   list = ["hello", "world"]
 
    arbre::Tree a
    arbre = Branch (Branch (Leaf 1) (Leaf 2) ) (Leaf 3)
@@ -71,6 +71,7 @@ on lance avec `leProgramme.exe`
 |  /   | division                        |
 |  %   | modulo                          |
 |  ^   | puissance                       |
+|  :+  | partie imaginaire               |
 
 *autre symboles*
 | symbole | definition |
