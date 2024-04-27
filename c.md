@@ -11,10 +11,10 @@ on lance avec `./execuble.x`
 
 *primitif*
 ```C
-	static int d ; //variables persistante qui reste donc jusqu'à la fin du programme
-	register int i;//variable sans adresse, sert à optimiser, le compilo le fait seul
-	unsigned 
-	signed
+	static int 	//variables persistante qui reste donc jusqu'à la fin du programme
+	register int	//variable sans adresse, sert à optimiser, le compilo le fait seul
+	unsigned int
+	signed int
 	char
 	short
 	int	
