@@ -115,6 +115,7 @@ on lance avec `./execuble.x`
 |  #   | macro                           |
 |  &   | adresse de ...                  |
 |  ?   | opération ternaire              |
+|  .   | membre de struct                |
 |  ->  | attribut d'une adresse de structure              |
 ---
 ## Condition
