@@ -11,33 +11,66 @@ on lance avec `a.exe`
 
 *primitif*
 ```cpp
-	auto i=0;
-	auto i2 {0};
-	int  i3 = 0;
-	std::string f = "hello";
-	auto cString = "";
+	static int	//variables persistante qui reste donc jusqu'à la fin du programme
+	register int	//variable sans adresse, sert à optimiser, le compilo le fait seul
+	unsigned int
+	signed int
+	char
+	short
+	int	
+	long
+	long long
+	float
+	double
+	int* pointeur
+	void* type_incompler
+	int (*pointeur_sur_fonction)(int);	//pointeur sur une fonction prennant un int return un int
+	std::string s = "hello"s;
+	auto Cstring = "hello";
 ```
 
 *defini par l'utilisateur*
 ```cpp
-	struct point {
-		int x;
-		int y;
+	struct agrega1 {
+
+		//aggrega de types
+		
+	}
+	var1,var2;
+
+	union agrega2
+	{
+		//aggrega de types mais qui partage la meme memoire 
+		//chacun peut avoir une valeur a la fois
 	};
 
 	enum class rep {
-		NON,OUI;
+		NON,OUI; //pas de conversion implicit
 	};
 
-	union point {
-		char x;
+	enum enumeration 
+	{
+		LUNDI,
+		MARDI=2,
+		MERCREDI,
+		JEUDI,
+		VENDREDI,
+		SAMEDI,
+		DIMANCHE;
 	};
+
+	//on peut utiliser typedef pour ne pas avoir a repeter le type de base (struct, enum, union)
+	typedef union agrega2 agrega2;
+	
+	struct agrega1 a1 = (struct agrega1){valeur1, valeur2};
+	struct agrega1 a2 = (struct agrega1){.attribut=valeur1, .attribut2=valeur2};
 ```
 ---
 ## Tableau et collections
 ```cpp
 	//taille fixe
 	std::array<int,3> n = {1,2,3};
+
 	//equivalent herité du c:
 	int n[3] ;
 
@@ -52,19 +85,17 @@ on lance avec `a.exe`
 | symbole | definition |
 |--|--|
 | &&   | et                              |
-| and  | et                              |
 | \|\| | ou                              |
-| or   | ou                              |
 | ^    | xou (binaire aussi)             |
-| xor  | xou (binaire aussi)             |
 | !    | non                             |
-| not  | non                             |
 | ==   | egalité                         |
 | !=   | inegalité                       |
 |  >   | sup                             |
 | >=   | supOuEgal                       |
 |  <   | inf                             |
 | <=   | infOuEgal                       |
+
+certain opérateur on des synonimes comme "and" pour &&
 
 *operateur mathématique*
 | symbole | definition |
@@ -94,11 +125,15 @@ on lance avec `a.exe`
 |  :   | switch/label/else ternaire      |
 |  ... | nbr variable d'argument         |
 |  {}  | block                           |
-|  []  | tableau                         |
+| \[]  | tableau, closure de lambda      |
 |  #   | macro                           |
-|  &   | adresse de ...                  |
+|  &   | adresse de ... /reference       |
 |  ?   | opération ternaire              |
+|  .   | membre de struct/classe         |
 |  ->  | attribut d'une adresse de structure              |
+| ::   | namespace						 |
+| \<T> | template 						 |
+
 ---
 ## Conditions
 ```cpp
@@ -158,11 +193,10 @@ on lance avec `a.exe`
 ### Functions/Sous-programmes
 ```cpp
 	void f() {}
-	auto lambda = [variableExterne](int param1)mutable->void{code};
-	auto lambda = [](){};
+	auto lambda = [closure/*by ref or value*/](int param1)mutable->void{code};
 
-  //surcharge d'operateur
-  int operator +(int a, int b) {return 2;}
+	//surcharge d'operateur
+	int operator +(int a, int b) {return 2;}
 ```
 *tt les operateurs surchargeables*
 | assignment | increment/decrement | arithmetic | logical  | comparison | member/access | other        |
@@ -170,13 +204,13 @@ on lance avec `a.exe`
 |  a = b     |                     | +a         |          |            |               |              |
 | a += b     |                     | -a         |          |            |               |              |
 | a -= b     |                     | a + b      |          |            |               |              |
-| a *= b     | ++a                 | a - b      | !a       | a == b     | a[...]        | appel de fct |
-| a /= b     | --a                 | a * b      | a && b   | a != b     | *a            | a(...)       |
+| a \*= b    | ++a                 | a - b      | !a       | a == b     | a\[...]       | appel de fct |
+| a /= b     | --a                 | a * b      | a && b   | a != b     | \*a           | a(...)       |
 | a %= b     | a++                 | a / b      | a \|\| b | a < b      | &a            | virgule      |
 | a &= b     | a--                 | a % b      |          | a > b      | a->b          | a, b         |
 | a \|= b    |                     | \~a        |          | a <= b     | a.b           | conditional  |
-| a ^= b     |                     | a & b      |          | a >= b     | a->*b         | a ? b : c    |
-| a <<= b    |                     | a \| b     |          | a <=> b    | a.*b          |              |
+| a ^= b     |                     | a & b      |          | a >= b     | a->\*b        | a ? b : c    |
+| a <<= b    |                     | a \| b     |          | a <=> b    | a.\*b         |              |
 | a >>= b    |                     | a ^ b      |          |            |               |              |
 |            |                     | a << b     |          |            |               |              |
 |            |                     | a >> b     |          |            |               |              |
@@ -233,16 +267,24 @@ on lance avec `a.exe`
 ---
 ## Objets
 ```cpp
-	class e {
-      e() = default;
-      ~e() {/*destructeur*/}
+	class Obj {
 
-		public:
-		private:
-		protected:
+	/*encapsulation*/
+	private:
+		int attr;
+	public:
+    	Obj() = default;
+    	Obj(Obj& o) = 0; //suppression de la methode
+    	~Obj() {/*destructeur*/}
+	protected:
+		void method() {}
+		friend void d(); //fonction autorisé à manipulée les données
+	}
 
-		//fonction autorisé à manipulée les données
-		friend void d();
+	class Derived : public Obj {
+
+	private:
+		void method() {/*override*/}
 	}
 ```
 ---
@@ -257,8 +299,6 @@ atomic_cancel
 atomic_commit
 atomic_noexcept
 auto
-bitand
-bitor
 bool
 break
 case
@@ -303,12 +343,8 @@ mutable
 namespace
 new
 noexcept
-not
-not_eq
 nullptr
 operator
-or
-or_eq
 private
 protected
 public
@@ -343,6 +379,12 @@ void
 volatile
 wchar_t
 while
+not
+not_eq
+or
+or_eq
+bitand
+bitor
 xor
 xor_eq
 ```
