@@ -193,6 +193,15 @@ BLOCK_COMMENT
 	}
 ```
 ---
+## Preprocessor
+```
+    * : Correspond à zéro ou plusieurs caractères. Par exemple, *.txt correspond à tous les fichiers avec l'extension .txt.
+    ? : Correspond à un seul caractère. Par exemple, file?.txt correspond à file1.txt, fileA.txt, mais pas à file10.txt.
+    [...] : Correspond à un ensemble de caractères. Par exemple, file[1-3].txt correspond à file1.txt, file2.txt, et file3.txt.
+    ! ou ^ dans un ensemble : Exclut certains caractères. Par exemple, file[!1].txt correspond à tous les fichiers qui ne commencent pas par file1.txt.
+    ** : Permet de correspondre à des répertoires de manière récursive. Par exemple, **/*.txt correspond à tous les fichiers .txt dans tous les sous-répertoires.
+```
+---
 ## Multithread/task
 ```bash
 	& #ne pas attendre que la commande ce termine 
