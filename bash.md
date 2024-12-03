@@ -95,15 +95,15 @@ BLOCK_COMMENT
 
 *parenthèses*
 
-| symbole                                   | precision |
-| -----------------------------------------	| --------- |
-| ( subshell )                          	| |
-| (( integer_arythmetic ))              	| |
-| $(( integer_arythmetic_with_result )) 	| |
-| <( file-like-result )                 	| |
-| array_like_var=($( command ))         	| |
-| \$( command )$?                        	| |
-| "$( interpolation )"                  	| |
+| symbole                                       | precision |
+| --------------------------------------------- | --------- |
+| ( ... )                          	        | subshell |
+| (( ... ))              	                | integer arythmetic |
+| $(( ... )) 	                                | integer arythmetic with result |
+| <( ... )                 	                | file like result |
+| >( ... )                                      | pipe instead of file |
+| array_like_var=($( ... ))         	| |
+| "$( ... )"                             	| interpolation |
 | \[ 7 -ne 8 ]                           	| remplace les arguments avec des jokers dedans \*.txt |
 | \[\[ 7 -ne 8 ]]                         	| ne remplace pas les arguments avec des jokers |
 | echo "list "{destructuration, spreading}  | |
